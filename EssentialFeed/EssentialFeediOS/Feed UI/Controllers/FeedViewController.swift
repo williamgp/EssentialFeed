@@ -12,11 +12,13 @@ public final class FeedViewController: UITableViewController,
                                        FeedLoadingView, FeedErrorView {
     
     public var delegate: FeedViewControllerDelegate?
+    private var loadingControllers = [IndexPath: FeedImageCellController]()
     
     private var viewAppeared = false
     
     public var tableModel = [FeedImageCellController]() {
         didSet {
+            loadingControllers = [:]
             tableView.reloadData()
         }
     }
@@ -75,11 +77,14 @@ public final class FeedViewController: UITableViewController,
     }
     
     private func cellController(forRowAt indexPath: IndexPath) -> FeedImageCellController {
-        return tableModel[indexPath.row]
+        let controller = tableModel[indexPath.row]
+        loadingControllers[indexPath] = controller
+        return controller
     }
     
     private func cancelCellControllerLoad(forRowAt indexPath: IndexPath) {
-        cellController(forRowAt: indexPath).cancelLoad()
+        loadingControllers[indexPath]?.cancelLoad()
+        loadingControllers[indexPath] = nil
     }
     
     private func requestCellImage(forRowAt indexPath: IndexPath){
