@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FeedItem {
+struct FeedItem: Identifiable {
     let id: UUID
     let description: String?
     let location: String?
