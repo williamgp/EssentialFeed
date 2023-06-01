@@ -1,9 +1,4 @@
-//
-//  EssentialFeedTests.swift
-//  EssentialFeedTests
-//
 //  Created by Wiiliam Peregoy on 6/1/23.
-//
 
 import XCTest
 @testable import EssentialFeed

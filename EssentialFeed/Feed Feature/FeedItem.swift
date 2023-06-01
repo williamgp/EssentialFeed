@@ -1,9 +1,4 @@
-//
-//  FeedItem.swift
-//  EssentialFeed
-//
 //  Created by Wiiliam Peregoy on 6/1/23.
-//
 
 import Foundation
 
