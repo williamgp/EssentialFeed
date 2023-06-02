@@ -33,6 +33,7 @@
 		AC8A42692A295E4200D1CC84 /* EssentialFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedTests.swift; sourceTree = "<group>"; };
 		AC8A42742A295F1300D1CC84 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		AC8A42762A295F7800D1CC84 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
+		AC8A427E2A29694400D1CC84 /* EssentialFeed.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeed.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 		AC8A42502A295E4200D1CC84 = {
 			isa = PBXGroup;
 			children = (
+				AC8A427E2A29694400D1CC84 /* EssentialFeed.xctestplan */,
 				AC8A425C2A295E4200D1CC84 /* EssentialFeed */,
 				AC8A42682A295E4200D1CC84 /* EssentialFeedTests */,
 				AC8A425B2A295E4200D1CC84 /* Products */,
