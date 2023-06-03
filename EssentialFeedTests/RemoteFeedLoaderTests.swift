@@ -1,7 +1,7 @@
 //  Created by Wiiliam Peregoy on 6/1/23
 
 import XCTest
-@testable import EssentialFeed
+import EssentialFeed
 
 final class RemoteFeedLoaderTests: XCTestCase {
     
