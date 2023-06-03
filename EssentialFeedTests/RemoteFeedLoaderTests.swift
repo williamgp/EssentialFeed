@@ -28,7 +28,7 @@ final class RemoteFeedLoaderTests: XCTestCase {
         sut.load()
 
         XCTAssertEqual(client.requestedURL, url)
-        XCTAssertEqual(client.requestedURLCallCount, 2)
+        XCTAssertEqual(client.requestedURLs, [url, url])
     }
     
     // MARK: - Helpers
@@ -42,11 +42,11 @@ final class RemoteFeedLoaderTests: XCTestCase {
     
     private class HTTPClientSpy: HTTPClient {
         var requestedURL: URL?
-        var requestedURLCallCount = 0
+        var requestedURLs = [URL]()
 
         func get(from url: URL) {
             requestedURL = url
-            requestedURLCallCount += 1
+            requestedURLs.append(url)
         }
     }
 }
