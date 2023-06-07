@@ -49,9 +49,13 @@ final class RemoteFeedLoaderTests: XCTestCase {
         sut.load() { capturedErrors.append($0) }
         
         let clientError = NSError(domain: "Test", code: 0)
-        client.complete(withStatusCode: 400)
+        let statusCodes = [199, 201, 300, 400, 500]
+        statusCodes.forEach { code in
+            client.complete(withStatusCode: code)
+            XCTAssertEqual(capturedErrors, [.invalidData])
+            capturedErrors = []
+        }
         
-        XCTAssertEqual(capturedErrors, [.invalidData])
     }
     
     // MARK: - Helpers
