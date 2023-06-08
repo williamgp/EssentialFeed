@@ -82,13 +82,10 @@ final class RemoteFeedLoaderTests: XCTestCase {
             location: "a location`",
             imageURL: URL(string: "http://another-url.com")!)
         
-        let itemsJSON = [
-            "items": [item1.json, item2.json]
-        ]
+        let itemsJSON = [ "items": [item1.json, item2.json] ]
+        let items = [item1.model, item2.model]
         
-        expect(sut,
-               toCompleteWith: .success([item1.model, item2.model])) {
-                    
+        expect(sut, toCompleteWith: .success(items)) {
             let json = try! JSONSerialization.data(withJSONObject: itemsJSON)
             client.complete(withStatusCode: 200, data: json)
         }
