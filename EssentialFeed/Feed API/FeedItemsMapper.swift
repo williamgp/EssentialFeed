@@ -6,7 +6,11 @@ internal final class FeedItemsMapper {
     private static var OK_200: Int { 200 }
     
     private struct Root: Decodable {
-        let items: [Item]
+        private let items: [Item]
+        
+        var feed: [FeedItem] {
+            items.map { $0.item }
+        }
     }
 
     private struct Item: Identifiable, Decodable {
@@ -28,9 +32,7 @@ internal final class FeedItemsMapper {
               let root = try? JSONDecoder().decode(Root.self, from: data) else {
             return .failure(.invalidData)
         }
-        
-        let items = root.items.map { $0.item }
-        return .success(items)
+        return .success(root.feed)
     }
 }
 
