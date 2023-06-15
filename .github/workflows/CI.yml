@@ -11,7 +11,6 @@ on:
 
 jobs:
   build-and-test:
-
     runs-on: macos-latest
 
     steps:
@@ -21,9 +20,4 @@ jobs:
     run: sudo xcode-select switch /Applications/Xcode_14.3.1.app
     
     - name: Build and Test
-      run: xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-
-      
-    - name: Run tests
-      run: swift test -v
-  
+      run: xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  
