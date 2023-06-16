@@ -10,14 +10,14 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build-and-test:
+    name: Bulild and test
     runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v3
-    
     - name: Select xcodeproj
     run: sudo xcode-select switch /Applications/Xcode_14.3.1.app
     
-    - name: Build and Test
-      run: xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  
+    - name: Xcode build and test
+    run: xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  
