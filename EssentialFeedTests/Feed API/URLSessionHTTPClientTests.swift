@@ -18,14 +18,15 @@ final class URLSessionHTTPClientTests: XCTestCase {
     func test_getFromURL_performsGETRequestWithURL() {
         let url = anyURL()
         let exp = expectation(description: "Wait for completion.")
-    
+        exp.expectedFulfillmentCount = 2
+        
         URLProtocolStub.observeRequests { request in
             XCTAssertEqual(request.url?.host, url.host)
             XCTAssertEqual(request.httpMethod, "GET")
             exp.fulfill()
         }
        
-        makeSUT().get(from: url) { _ in }
+        makeSUT().get(from: url) { _ in exp.fulfill() }
         
         wait(for: [exp], timeout: 1.0)
     }
@@ -201,6 +202,4 @@ private class URLProtocolStub: URLProtocol {
     }
     
     override func stopLoading() {}
-    
-    
 }
