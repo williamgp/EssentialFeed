@@ -9,8 +9,7 @@ on:
   pull_request:
     branches: [ "main" ]
 
-jobs:
-build_and_test:
+jobs:build_and_test:
     name: Build and analyse default scheme using xcodebuild command
     runs-on: macos-latest
 
