@@ -14,6 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3 
       - name: Select xcodeproj
-        run: sudo xcode-select switch /Applications/Xcode_14.3.1.ap     
+        run: sudo xcode-select -switch /Applications/Xcode_14.3.1.app     
       - name: Xcode build and test
         run: xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  
