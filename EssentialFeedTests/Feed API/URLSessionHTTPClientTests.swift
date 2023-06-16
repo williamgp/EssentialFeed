@@ -20,7 +20,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
         let exp = expectation(description: "Wait for completion.")
         
         URLProtocolStub.observeRequests { request in
-            XCTAssertEqual(request.url?.host(), url.host())
+            XCTAssertEqual(request.url?.host, url.host)
             XCTAssertEqual(request.httpMethod, "GET")
             exp.fulfill()
         }
