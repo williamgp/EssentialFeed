@@ -10,8 +10,8 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-test:
-    name: Bulild and test
+  build:
+    name: Build and analyse default scheme using xcodebuild command
     runs-on: macos-latest
 
     steps:
