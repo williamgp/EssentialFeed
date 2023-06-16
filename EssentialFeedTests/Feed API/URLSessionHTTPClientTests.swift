@@ -18,10 +18,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
     func test_getFromURL_performsGETRequestWithURL() {
         let url = anyURL()
         let exp = expectation(description: "Wait for completion.")
-        // Observing the requests in our URLProtocolStub can result in over fulfillment as the URL
-        // Loading System is populating the request with headers, etc
-        exp.assertForOverFulfill = false
-        
+    
         URLProtocolStub.observeRequests { request in
             XCTAssertEqual(request.url?.host, url.host)
             XCTAssertEqual(request.httpMethod, "GET")
@@ -178,7 +175,6 @@ private class URLProtocolStub: URLProtocol {
     }
     
     override class func canInit(with request: URLRequest) -> Bool {
-        requestObserver?(request)
         return true
     }
     
@@ -187,6 +183,7 @@ private class URLProtocolStub: URLProtocol {
     }
     
     override func startLoading() {
+        URLProtocolStub.requestObserver?(request)
 
         if let data = URLProtocolStub.stub?.data {
             client?.urlProtocol(self, didLoad: data)
