@@ -42,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC2E621D2A4CC0A100456F6D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AC5327272A3A9E1400C127BB /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		AC53272D2A3B859300C127BB /* EssentialFeedAPIEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAPIEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC53272F2A3B859300C127BB /* EssentialFeedAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAPIEndToEndTests.swift; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 		AC8A42502A295E4200D1CC84 = {
 			isa = PBXGroup;
 			children = (
+				AC2E621D2A4CC0A100456F6D /* README.md */,
 				AC8A425C2A295E4200D1CC84 /* EssentialFeed */,
 				AC8A42682A295E4200D1CC84 /* EssentialFeedTests */,
 				AC53272E2A3B859300C127BB /* EssentialFeedAPIEndToEndTests */,
