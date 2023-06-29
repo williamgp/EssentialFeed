@@ -1,9 +1,9 @@
-//  Created by Wiiliam Peregoy on 6/1/23
+//  Created by William Peregoy on 6/1/23
 
 import XCTest
 import EssentialFeed
 
-final class RemoteFeedLoaderTests: XCTestCase {
+final class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     
     func test_init_doesNotRequestDataFromURL() {
         let (_, client) = makeSUT()
@@ -108,13 +108,15 @@ final class RemoteFeedLoaderTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeSUT(url: URL = URL(string: "http://a-url.com")!) -> (
-        sut: RemoteFeedLoader, client: HTTPClientSpy) {
-            let client = HTTPClientSpy()
-            let sut = RemoteFeedLoader(url: url, client: client)
-            trackForMemoryLeaks(sut)
-            trackForMemoryLeaks(client)
-            return (sut: sut, client: client)
+    private func makeSUT(url: URL = URL(string: "http://a-url.com")!,
+                         file: StaticString = #filePath,
+                         line: UInt = #line) -> (sut: RemoteFeedLoader,
+                                                 client: HTTPClientSpy) {
+        let client = HTTPClientSpy()
+        let sut = RemoteFeedLoader(url: url, client: client)
+        trackForMemoryLeaks(sut, file: file, line: line)
+        trackForMemoryLeaks(client, file: file, line: line)
+        return (sut: sut, client: client)
         }
     
     private func makeItem(id: UUID,
