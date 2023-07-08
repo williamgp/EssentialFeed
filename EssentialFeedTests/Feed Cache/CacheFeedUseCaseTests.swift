@@ -33,10 +33,18 @@ class LocalFeedLoader {
     }
 }
 
-class FeedStore {
+protocol FeedStore {
     typealias DeletionCompletion = (Error?) -> Void
     typealias InsertionCompletion = (Error?) -> Void
+    
+    func deleteCachedFeed(completion: @escaping DeletionCompletion)
+    
+    func insert(_ items: [FeedItem],
+                timestamp: Date,
+                completion: @escaping InsertionCompletion)
+}
 
+class FeedStoreSpy: FeedStore {
     enum ReceivedMessage: Equatable {
         case deleteCachedFeed
         case insert([FeedItem], Date)
@@ -146,7 +154,7 @@ final class CacheFeedUseCaseTests: XCTestCase {
     }
     
     func test_save_doesNotInvokeDeletionErrorAfterSUTHasBeenDeallocated() {
-        let store = FeedStore()
+        let store = FeedStoreSpy()
         var sut: LocalFeedLoader? = LocalFeedLoader(store: store, currentDate: Date.init)
         
         var receivedResults = [Error?]()
@@ -159,7 +167,7 @@ final class CacheFeedUseCaseTests: XCTestCase {
     }
     
     func test_save_doesNotInvokeInsertionErrorAfterSUTHasBeenDeallocated() {
-        let store = FeedStore()
+        let store = FeedStoreSpy()
         var sut: LocalFeedLoader? = LocalFeedLoader(store: store, currentDate: Date.init)
         
         var receivedResults = [Error?]()
@@ -177,8 +185,8 @@ final class CacheFeedUseCaseTests: XCTestCase {
      
     private func makeSUT(currentDate: @escaping () -> Date = Date.init,
                          file: StaticString = #filePath,
-                         line: UInt = #line) -> (sut: LocalFeedLoader, store: FeedStore) {
-        let store = FeedStore()
+                         line: UInt = #line) -> (sut: LocalFeedLoader, store: FeedStoreSpy) {
+        let store = FeedStoreSpy()
         let sut = LocalFeedLoader(store: store, currentDate: currentDate)
         trackForMemoryLeaks(sut, file: file, line: line)
         trackForMemoryLeaks(store, file: file, line: line)
