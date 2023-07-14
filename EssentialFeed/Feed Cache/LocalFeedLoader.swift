@@ -27,7 +27,7 @@ public final class LocalFeedLoader {
     
     private func cache(items: [FeedItem], with completion: @escaping (SaveResult) -> ()) {
         self.store.insert(items.toLocal(), timestamp: self.currentDate()) { [weak self] error in
-            guard let self = self else { return }
+            guard self != nil else { return }
             
             completion(error)
         }
