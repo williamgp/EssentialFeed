@@ -2,13 +2,6 @@
 
 import Foundation
 
-internal struct RemoteFeedItem: Identifiable, Decodable {
-    internal let id: UUID
-    internal let description: String?
-    internal let location: String?
-    internal let image: URL
-}
-
 internal final class FeedItemsMapper {
     private static var OK_200: Int { 200 }
     
