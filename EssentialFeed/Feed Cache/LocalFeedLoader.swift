@@ -36,9 +36,8 @@ public final class LocalFeedLoader {
             case let .found(feed, timestamp) where self.validate(timestamp):
                 completion(.success(feed.toModels()))
                 
-            case .empty, .found(_, _):
+            case .found, .empty:
                 completion(.success([]))
-                
             }
         }
     }
