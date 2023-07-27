@@ -130,10 +130,13 @@ Given the customer doesn't have connectivity
 
 ### Local feed cache triangulation
 - Retrieve
-    - Empty cache
+    ✅ Empty cache returns empty
+    - Empty cache twice returns empty (no side-effects)
     - Non-empty cache returns data
     - Non-empty cache twice returns same data (no side-effects)
-    - Error (if applicable, eg. invalid data)
+    - Error returns error (if applicable, eg. invalid data)
+    - Error twice returns same error (if applicable, eg. invalid data)
+
 
 - Insert
     - To empty cache stores data
