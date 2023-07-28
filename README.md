@@ -140,7 +140,7 @@ Given the customer doesn't have connectivity
 
 - Insert
     ✅ To empty cache stores data
-    - To non-empty cache overrides previous data with new data
+    ✅ To non-empty cache overrides previous data with new data
     - Error (if applicable, eg. no write permission)
     
 - Delete
