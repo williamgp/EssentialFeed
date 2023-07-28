@@ -195,14 +195,14 @@ final class CodableFeedStoreTests: XCTestCase {
     
     func makeSUT(storeURL: URL? = nil,
                  file: StaticString = #filePath,
-                 line: UInt = #line) -> CodableFeedStore {
+                 line: UInt = #line) -> FeedStore {
         let sut = CodableFeedStore(storeURL: storeURL ?? testSpecificStoreURL())
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
     
     @discardableResult
-    private func insert(_ inserted: (feed: [LocalFeedImage], timestamp: Date), to sut: CodableFeedStore,
+    private func insert(_ inserted: (feed: [LocalFeedImage], timestamp: Date), to sut: FeedStore,
                         file: StaticString = #filePath, line: UInt = #line) -> Error? {
         let exp = expectation(description: "Wait for cache retrieval")
         var insertionError: Error?
@@ -215,7 +215,7 @@ final class CodableFeedStoreTests: XCTestCase {
         return insertionError
 }
     
-    private func deleteCache(from sut: CodableFeedStore) -> Error? {
+    private func deleteCache(from sut: FeedStore) -> Error? {
         let exp = expectation(description: "Wait for cache deletion")
         var deletionError: Error?
         sut.deleteCachedFeed { receivedDeletionError in
@@ -226,13 +226,13 @@ final class CodableFeedStoreTests: XCTestCase {
         return deletionError
     }
     
-    private func expect(_ sut: CodableFeedStore, toRetrieveTwice expectedResult: RetrievedCacheFeedResult,
+    private func expect(_ sut: FeedStore, toRetrieveTwice expectedResult: RetrievedCacheFeedResult,
                                  file: StaticString = #filePath, line: UInt = #line ) {
         expect(sut, toRetrieve: expectedResult)
         expect(sut, toRetrieve: expectedResult)
     }
     
-    private func expect(_ sut: CodableFeedStore, toRetrieve expectedResult: RetrievedCacheFeedResult,
+    private func expect(_ sut: FeedStore, toRetrieve expectedResult: RetrievedCacheFeedResult,
                         file: StaticString = #filePath, line: UInt = #line ) {
         let exp = expectation(description: "Wait for cache retrieval")
 
