@@ -37,6 +37,7 @@
 		ACF86CEE2A2ABBE600A21D98 /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF86CED2A2ABBE600A21D98 /* RemoteFeedLoader.swift */; };
 		ACFA8FAC2A743727008F63B4 /* FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA8FAB2A743727008F63B4 /* FeedStoreSpecs.swift */; };
 		ACFA8FAE2A743906008F63B4 /* XCTestCase+FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA8FAD2A743906008F63B4 /* XCTestCase+FeedStoreSpecs.swift */; };
+		ACFA8FBF2A747B5B008F63B4 /* CoreDateFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA8FBE2A747B5B008F63B4 /* CoreDateFeedStoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		ACF86CED2A2ABBE600A21D98 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 		ACFA8FAB2A743727008F63B4 /* FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpecs.swift; sourceTree = "<group>"; };
 		ACFA8FAD2A743906008F63B4 /* XCTestCase+FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedStoreSpecs.swift"; sourceTree = "<group>"; };
+		ACFA8FBE2A747B5B008F63B4 /* CoreDateFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDateFeedStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				AC3F869F2A708D6F00BA8497 /* ValidateFeedCacheUseCaseTests.swift */,
 				AC3F86A72A72EFB700BA8497 /* CodableFeedStoreTests.swift */,
 				ACFA8FAB2A743727008F63B4 /* FeedStoreSpecs.swift */,
+				ACFA8FBE2A747B5B008F63B4 /* CoreDateFeedStoreTests.swift */,
 				ACFA8FAD2A743906008F63B4 /* XCTestCase+FeedStoreSpecs.swift */,
 			);
 			path = "Feed Cache";
@@ -419,6 +422,7 @@
 				AC3F86A22A70911E00BA8497 /* FeedCacheTestHelpers.swift in Sources */,
 				AC3F86A02A708D6F00BA8497 /* ValidateFeedCacheUseCaseTests.swift in Sources */,
 				AC8A42802A29B0AA00D1CC84 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
+				ACFA8FBF2A747B5B008F63B4 /* CoreDateFeedStoreTests.swift in Sources */,
 				ACE5CB4E2A3A888500F1A788 /* XCTTestCase+MemoryTrackingHelper.swift in Sources */,
 				AC2E62302A62198100456F6D /* FeedStoreSpy.swift in Sources */,
 				AC3F86A42A7091F100BA8497 /* SharedTestHelpers.swift in Sources */,
