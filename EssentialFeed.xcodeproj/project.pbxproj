@@ -258,11 +258,27 @@
 		ACFA8FC22A7488FE008F63B4 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				ACBFA7F32A739B1D0004E638 /* CodableFeedStore.swift */,
+				ACFA8FC42A7489B0008F63B4 /* Codable */,
+				ACFA8FC32A7489A3008F63B4 /* CoreData */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		ACFA8FC32A7489A3008F63B4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
 				ACFA8FB32A7476C5008F63B4 /* FeedStore.xcdatamodeld */,
 				ACFA8FC02A747BEE008F63B4 /* CoreDataFeedStore.swift */,
 			);
-			path = Infrastructure;
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		ACFA8FC42A7489B0008F63B4 /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				ACBFA7F32A739B1D0004E638 /* CodableFeedStore.swift */,
+			);
+			path = Codable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
