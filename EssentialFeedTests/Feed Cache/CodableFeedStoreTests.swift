@@ -11,6 +11,7 @@ final class CodableFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
     }
     
     override func tearDown() {
+        undoStoreSideEffects()
         super.tearDown()
     }
     
