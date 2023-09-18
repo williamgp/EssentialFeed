@@ -15,7 +15,8 @@ jobs:
       - uses: actions/checkout@v3 
       - name: Select xcodeproj
         run: sudo xcode-select -switch /Applications/Xcode_14.2.app     
-      - name: Xcode build and test
+      - name: Xcode build and test for macOS
         run: xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI_macOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+      - name: Xcode build and test for iOS
         run: xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI_iOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
