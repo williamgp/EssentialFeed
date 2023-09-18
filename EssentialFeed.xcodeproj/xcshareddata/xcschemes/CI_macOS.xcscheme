@@ -27,7 +27,7 @@
             buildForArchiving = "NO"
             buildForAnalyzing = "NO">
             <TestPlanReference
-               reference = "container:EssentialFeedTests/CI.xctestplan">
+               reference = "container:EssentialFeedTests/CI_iOS.xctestplan">
             </TestPlanReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -53,7 +53,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:EssentialFeedTests/CI.xctestplan"
+            reference = "container:EssentialFeedTests/CI_macOS.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
