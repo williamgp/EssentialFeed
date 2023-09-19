@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "96DAA969-DCF9-4B0C-9042-1C15A411DB2E",
+      "id" : "EF2DAFB7-2660-4765-9342-03CEFA95084E",
       "name" : "Test Scheme Action",
       "options" : {
 
@@ -9,6 +9,7 @@
     }
   ],
   "defaultOptions" : {
+    "codeCoverage" : false,
     "testExecutionOrdering" : "random"
   },
   "testTargets" : [
