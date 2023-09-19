@@ -18,4 +18,4 @@ jobs:
       - name: Xcode build and test for macOS
         run: xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI_macOS" -destination "platform=macOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
       - name: Xcode build and test for iOS
-        run: xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI_iOS" -destination "platform=iOS Simulator" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        run: xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI_iOS" -sdk iphonesimulator16.2 CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
