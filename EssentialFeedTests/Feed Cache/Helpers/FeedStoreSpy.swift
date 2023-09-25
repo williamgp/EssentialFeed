@@ -1,4 +1,4 @@
-//  Created by Wiiliam Peregoy on 7/14/23
+//  Created by William Peregoy on 7/14/23
 
 import Foundation
 import EssentialFeed
