@@ -324,8 +324,8 @@
 			isa = PBXGroup;
 			children = (
 				AC8535B72AC2565800D31146 /* Composers */,
-				AC85359E2AC240E600D31146 /* Controllers */,
 				AC61767B2AE86F8500A86122 /* Models */,
+				AC85359E2AC240E600D31146 /* Controllers */,
 				AC85359F2AC240ED00D31146 /* Views */,
 			);
 			path = "Feed UI";
