@@ -10,7 +10,7 @@ final class FeedImageCellController {
     }
     
     func view() -> UITableViewCell {
-        let cell = binded(FeedImageCell())
+        let cell = binding(FeedImageCell())
         viewModel.loadImageData()
         return cell
     }
@@ -23,7 +23,7 @@ final class FeedImageCellController {
         viewModel.cancelImageDataLoad()
     }
     
-    private func binded(_ cell: FeedImageCell) -> FeedImageCell {
+    private func binding(_ cell: FeedImageCell) -> FeedImageCell {
         cell.locationContainer.isHidden = !viewModel.hasLocation
         cell.locationLabel.text = viewModel.location
         cell.descriptionLabel.text = viewModel.description
