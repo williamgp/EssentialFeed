@@ -1,6 +1,5 @@
 //  Created by William Peregoy on 10/24/23
 
-import Foundation
 import EssentialFeed
 
 final class FeedViewModel {
