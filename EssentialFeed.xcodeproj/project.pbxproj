@@ -69,6 +69,8 @@
 		ACFA8FC62A7489D6008F63B4 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA8FC52A7489D6008F63B4 /* CoreDataHelpers.swift */; };
 		ACFA8FC82A748A54008F63B4 /* ManagedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA8FC72A748A54008F63B4 /* ManagedCache.swift */; };
 		ACFA8FCA2A748A5B008F63B4 /* ManagedFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA8FC92A748A5B008F63B4 /* ManagedFeedImage.swift */; };
+		ACFB497A2B575BDA007ED661 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFB49792B575BDA007ED661 /* Feed.storyboard */; };
+		ACFB497C2B575D81007ED661 /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACFB497B2B575D81007ED661 /* Feed.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +189,8 @@
 		ACFA8FC52A7489D6008F63B4 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 		ACFA8FC72A748A54008F63B4 /* ManagedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedCache.swift; sourceTree = "<group>"; };
 		ACFA8FC92A748A5B008F63B4 /* ManagedFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedFeedImage.swift; sourceTree = "<group>"; };
+		ACFB49792B575BDA007ED661 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		ACFB497B2B575D81007ED661 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 		ACFB91062A98187F00A13729 /* EssentialFeedCacheIntegrationTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeedCacheIntegrationTestPlan.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -345,6 +349,8 @@
 			children = (
 				AC50B6C22ABA74A00013E78B /* FeedImageCell.swift */,
 				AC5BF91F2ABBC2FC006AA791 /* UIView+Shimmering.swift */,
+				ACFB49792B575BDA007ED661 /* Feed.storyboard */,
+				ACFB497B2B575D81007ED661 /* Feed.xcassets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -737,6 +743,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFB497A2B575BDA007ED661 /* Feed.storyboard in Resources */,
+				ACFB497C2B575D81007ED661 /* Feed.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
