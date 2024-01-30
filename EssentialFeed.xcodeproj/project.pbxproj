@@ -135,7 +135,6 @@
 		AC26426E2B686D7600655D11 /* UITableView+CellDequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CellDequeueing.swift"; sourceTree = "<group>"; };
 		AC2642702B686F2600655D11 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
 		AC2642722B68830300655D11 /* FakeRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeRefreshControl.swift; sourceTree = "<group>"; };
-		AC2642742B68881B00655D11 /* UIViewController+UpcomingLifecycleMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+UpcomingLifecycleMethods.h"; sourceTree = "<group>"; };
 		AC2E621D2A4CC0A100456F6D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AC2E62222A4CC73900456F6D /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
 		AC2E62242A5E228100456F6D /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
@@ -358,7 +357,6 @@
 				AC5BF91F2ABBC2FC006AA791 /* UIView+Shimmering.swift */,
 				AC26426E2B686D7600655D11 /* UITableView+CellDequeueing.swift */,
 				AC2642702B686F2600655D11 /* UIImageView+Animations.swift */,
-				AC2642742B68881B00655D11 /* UIViewController+UpcomingLifecycleMethods.h */,
 				ACFB49792B575BDA007ED661 /* Feed.storyboard */,
 				ACFB497B2B575D81007ED661 /* Feed.xcassets */,
 			);
@@ -1039,7 +1037,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/EssentialFeediOS/Feed UI/Views/UIViewController+UpcomingLifecycleMethods.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1096,7 +1094,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/EssentialFeediOS/Feed UI/Views/UIViewController+UpcomingLifecycleMethods.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
