@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
             endingLineNumber = "15"
-            landmarkName = "simulateAppearance()"
+            landmarkName = "simulateFeedImageViewVisible(at:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
