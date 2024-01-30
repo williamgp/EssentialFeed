@@ -7,7 +7,7 @@
 #warning "UIViewController+UpcomingLifecycleMethods.h is redundant when compiling with the iOS 17 SDK"
 #else
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface UIViewController (UpcomingLifecycleMethods)
 
