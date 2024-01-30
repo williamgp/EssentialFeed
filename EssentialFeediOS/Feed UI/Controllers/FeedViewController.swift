@@ -10,13 +10,18 @@ public final class FeedViewController: UITableViewController,
                                        UITableViewDataSourcePrefetching, FeedLoadingView {
     var delegate: FeedViewControllerDelegate?
     
+    private var viewAppeared = false
+    
     var tableModel = [FeedImageCellController]() {
         didSet { tableView.reloadData() }
     }
     
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-        refresh()
+    public override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        if !viewAppeared {
+            refresh()
+            viewAppeared = true
+        }
     }
     
     @IBAction private func refresh() {
