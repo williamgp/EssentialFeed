@@ -13,7 +13,7 @@ FOUNDATION_EXPORT const unsigned char EssentialFeedVersionString[];
 
 #if defined(__IPHONE_17_0)
 #warning "UIViewController+UpcomingLifecycleMethods.h is redundant when compiling with the iOS 17 SDK"
-#else
+#elif defined(TARGET_OS_IPHONE)
 
 @import UIKit;
 
