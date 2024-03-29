@@ -16,6 +16,11 @@ public final class FeedViewController: UITableViewController,
         didSet { tableView.reloadData() }
     }
     
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "My Feed"
+    }
+    
     public override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
         if !viewAppeared {
