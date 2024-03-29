@@ -164,6 +164,7 @@
 		AC7ED8F12BB65B030019ED41 /* FeedViewControllerTests+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+Localization.swift"; sourceTree = "<group>"; };
 		AC7ED8F42BB65C0C0019ED41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		AC7ED8F62BB65C4D0019ED41 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
+		AC7ED8F72BB65C860019ED41 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
 		AC85359B2AC2407600D31146 /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
 		AC8535A32AC241E600D31146 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		AC8535A52AC2420600D31146 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
@@ -703,6 +704,7 @@
 				en,
 				Base,
 				"pt-BR",
+				el,
 			);
 			mainGroup = AC8A42502A295E4200D1CC84;
 			productRefGroup = AC8A425B2A295E4200D1CC84 /* Products */;
@@ -905,6 +907,7 @@
 			children = (
 				AC7ED8F42BB65C0C0019ED41 /* en */,
 				AC7ED8F62BB65C4D0019ED41 /* pt-BR */,
+				AC7ED8F72BB65C860019ED41 /* el */,
 			);
 			name = Feed.strings;
 			sourceTree = "<group>";
