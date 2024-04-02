@@ -12,7 +12,7 @@ jobs:
     runs-on: macos-14
 
     steps:
-      - uses: actions/checkout@v3 
+      - uses: actions/checkout@v4 
       - name: Select xcodeproj
         run: sudo xcode-select -switch /Applications/Xcode_15.3.app     
       - name: Xcode build and test for macOS
