@@ -306,7 +306,8 @@ final class FeedUIIntegrationTests: XCTestCase {
     func test_loadImageDataCompletion_dispatchesFromBackgroundToMainThread() {
         let (sut, loader) = makeSUT()
 
-        sut.loadViewIfNeeded()
+        sut.simulateAppearance()
+        
         loader.completeFeedLoading(with: [makeImage()])
         _ = sut.simulateFeedImageViewVisible(at: 0)
 
