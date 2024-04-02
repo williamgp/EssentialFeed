@@ -10,7 +10,7 @@ final class FeedUIIntegrationTests: XCTestCase {
     func test_feedView_HasTitle() {
         let (sut, _) = makeSUT()
 
-        sut.loadViewIfNeeded()
+        sut.simulateAppearance()
         
         XCTAssertEqual(sut.title, localized("FEED_VIEW_TITLE"))
     }
@@ -286,6 +286,20 @@ final class FeedUIIntegrationTests: XCTestCase {
         loader.completeImageLoading(with: imageData, at: 1)
 
         XCTAssertEqual(newView.renderedImage, imageData)
+    }
+    
+    func test_loadFeedCompletion_dispatchesFromBackgroundToMainThread() {
+        let (sut, loader) = makeSUT()
+        
+        sut.simulateAppearance()
+        
+        let exp = expectation(description: "Wait for background queue")
+        DispatchQueue.global().async {
+            loader.completeFeedLoading(at: 0)
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: 1.0)
     }
 
     
