@@ -1,13 +1,16 @@
 //  Created by William Peregoy on 9/19/23
 
 import UIKit
+import EssentialFeed
 
 protocol FeedViewControllerDelegate {
     func didRequestFeedRefresh()
 }
 
 public final class FeedViewController: UITableViewController,
-                                       UITableViewDataSourcePrefetching, FeedLoadingView {
+                                        UITableViewDataSourcePrefetching,
+                                       FeedLoadingView, FeedErrorView {
+    
     var delegate: FeedViewControllerDelegate?
     
     private var viewAppeared = false
@@ -30,12 +33,16 @@ public final class FeedViewController: UITableViewController,
         delegate?.didRequestFeedRefresh()
     }
     
-    func display(_ viewModel: FeedLoadingViewModel) {
+    public func display(_ viewModel: FeedLoadingViewModel) {
         if viewModel.isLoading {
             refreshControl?.beginRefreshing()
         } else {
             refreshControl?.endRefreshing()
         }
+    }
+    
+    public func display(_ viewModel: FeedErrorViewModel) {
+        // TODO: Error message displaying not yet implemented in this version of iOS project
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
