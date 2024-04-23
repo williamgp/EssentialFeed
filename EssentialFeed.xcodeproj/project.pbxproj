@@ -72,6 +72,7 @@
 		ACAFF5122BD76B1000666574 /* HTTPClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAFF5112BD76B1000666574 /* HTTPClientSpy.swift */; };
 		ACAFF5142BD76C3200666574 /* RemoteFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAFF5132BD76C3200666574 /* RemoteFeedImageDataLoader.swift */; };
 		ACAFF5172BD7734200666574 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAFF5162BD7734200666574 /* HTTPURLResponse+StatusCode.swift */; };
+		ACAFF51A2BD7748E00666574 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAFF5192BD7748E00666574 /* URLProtocolStub.swift */; };
 		ACB6FCBC2ABA54C7007E4953 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8A425A2A295E4200D1CC84 /* EssentialFeed.framework */; };
 		ACB6FCBD2ABA54C7007E4953 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC8A425A2A295E4200D1CC84 /* EssentialFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACB6FCC12ABA55B3007E4953 /* XCTTestCase+MemoryTrackingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE5CB4D2A3A888500F1A788 /* XCTTestCase+MemoryTrackingHelper.swift */; };
@@ -212,6 +213,7 @@
 		ACAFF5112BD76B1000666574 /* HTTPClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientSpy.swift; sourceTree = "<group>"; };
 		ACAFF5132BD76C3200666574 /* RemoteFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedImageDataLoader.swift; sourceTree = "<group>"; };
 		ACAFF5162BD7734200666574 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
+		ACAFF5192BD7748E00666574 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 		ACB6FCBA2ABA519F007E4953 /* EssentialFeediOSTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeediOSTests.xctestplan; sourceTree = SOURCE_ROOT; };
 		ACC2915F2AB8FD9200CFE54D /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC291622AB8FD9200CFE54D /* EssentialFeediOS.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = EssentialFeediOS.docc; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 				AC8A427F2A29B0AA00D1CC84 /* LoadFeedFromRemoteUseCaseTests.swift */,
 				AC7770CC2A39071B00D5D73F /* URLSessionHTTPClientTests.swift */,
 				ACAFF50F2BC7A0A700666574 /* RemoteFeedImageDataLoaderTests.swift */,
+				ACAFF5182BD7746F00666574 /* Helpers */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -472,7 +475,6 @@
 				AC2E62202A4CC6CD00456F6D /* Feed Cache */,
 				AC8A42782A29606900D1CC84 /* Feed Feature */,
 				ACAFF4FD2BC398E600666574 /* Feed Presentation */,
-				ACAFF5152BD7732F00666574 /* Helpers */,
 			);
 			path = EssentialFeed;
 			sourceTree = "<group>";
@@ -530,6 +532,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		ACAFF5182BD7746F00666574 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ACAFF5112BD76B1000666574 /* HTTPClientSpy.swift */,
+				ACAFF5192BD7748E00666574 /* URLProtocolStub.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		ACB6FCBB2ABA54C7007E4953 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,7 +573,6 @@
 			children = (
 				ACE5CB4D2A3A888500F1A788 /* XCTTestCase+MemoryTrackingHelper.swift */,
 				AC3F86A32A7091F100BA8497 /* SharedTestHelpers.swift */,
-				ACAFF5112BD76B1000666574 /* HTTPClientSpy.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -576,6 +586,7 @@
 				ACF86CED2A2ABBE600A21D98 /* RemoteFeedLoader.swift */,
 				AC5327272A3A9E1400C127BB /* URLSessionHTTPClient.swift */,
 				ACAFF5132BD76C3200666574 /* RemoteFeedImageDataLoader.swift */,
+				ACAFF5152BD7732F00666574 /* Helpers */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -902,6 +913,7 @@
 				AC3F86A42A7091F100BA8497 /* SharedTestHelpers.swift in Sources */,
 				ACAFF5122BD76B1000666574 /* HTTPClientSpy.swift in Sources */,
 				AC2E62232A4CC73900456F6D /* CacheFeedUseCaseTests.swift in Sources */,
+				ACAFF51A2BD7748E00666574 /* URLProtocolStub.swift in Sources */,
 				ACAFF5102BC7A0A700666574 /* RemoteFeedImageDataLoaderTests.swift in Sources */,
 				AC2E622D2A62184900456F6D /* LoadFeedFromCacheUseCaseTests.swift in Sources */,
 				ACFA8FAC2A743727008F63B4 /* FeedStoreSpecs.swift in Sources */,
