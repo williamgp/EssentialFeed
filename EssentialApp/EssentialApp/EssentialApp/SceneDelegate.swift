@@ -1,6 +1,7 @@
-//  Created by Wiiliam Peregoy on 8/6/24
+//  Created by William Peregoy on 8/6/24
 
 import UIKit
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
