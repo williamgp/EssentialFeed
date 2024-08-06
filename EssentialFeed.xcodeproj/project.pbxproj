@@ -383,13 +383,6 @@
 			path = "Feed API";
 			sourceTree = "<group>";
 		};
-		AC85359A2AC2407500D31146 /* Feed Image Loader */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Feed Image Loader";
-			sourceTree = "<group>";
-		};
 		AC85359C2AC240CB00D31146 /* Feed UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -574,7 +567,6 @@
 		ACC291602AB8FD9200CFE54D /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
-				AC85359A2AC2407500D31146 /* Feed Image Loader */,
 				AC5EA7442B50B65700013108 /* Feed Presentation */,
 				ACC291622AB8FD9200CFE54D /* EssentialFeediOS.docc */,
 				AC85359C2AC240CB00D31146 /* Feed UI */,
