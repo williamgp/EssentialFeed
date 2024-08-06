@@ -152,7 +152,7 @@ Given the customer doesn't have connectivity
 1. System deletes cache.
 
 #### Empty cache course (sad path): 
-1. System delivers empty image feed
+1. System delivers not found error
 
 ### Cache Feed Use Case
 
