@@ -16,6 +16,10 @@
 		AC24A9012C62C98F007C7855 /* EssentialAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24A9002C62C98F007C7855 /* EssentialAppTests.swift */; };
 		AC24A90B2C62C98F007C7855 /* EssentialAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24A90A2C62C98F007C7855 /* EssentialAppUITests.swift */; };
 		AC24A90D2C62C98F007C7855 /* EssentialAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24A90C2C62C98F007C7855 /* EssentialAppUITestsLaunchTests.swift */; };
+		AC24A94B2C62CE93007C7855 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC24A9232C62CE2C007C7855 /* EssentialFeed.framework */; };
+		AC24A94C2C62CE93007C7855 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC24A9232C62CE2C007C7855 /* EssentialFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AC24A94D2C62CE93007C7855 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC24A92B2C62CE2C007C7855 /* EssentialFeediOS.framework */; };
+		AC24A94E2C62CE93007C7855 /* EssentialFeediOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC24A92B2C62CE2C007C7855 /* EssentialFeediOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +37,106 @@
 			remoteGlobalIDString = AC24A8E52C62C98E007C7855;
 			remoteInfo = EssentialApp;
 		};
+		AC24A9222C62CE2C007C7855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC24A9192C62CE2C007C7855 /* EssentialFeed.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AC8A425A2A295E4200D1CC84;
+			remoteInfo = EssentialFeed;
+		};
+		AC24A9242C62CE2C007C7855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC24A9192C62CE2C007C7855 /* EssentialFeed.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AC8A42642A295E4200D1CC84;
+			remoteInfo = EssentialFeedTests;
+		};
+		AC24A9262C62CE2C007C7855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC24A9192C62CE2C007C7855 /* EssentialFeed.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AC53272D2A3B859300C127BB;
+			remoteInfo = EssentialFeedAPIEndToEndTests;
+		};
+		AC24A9282C62CE2C007C7855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC24A9192C62CE2C007C7855 /* EssentialFeed.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AC255CF42A98119C007D38F0;
+			remoteInfo = EssentialFeedCacheIntegrationTests;
+		};
+		AC24A92A2C62CE2C007C7855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC24A9192C62CE2C007C7855 /* EssentialFeed.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ACC2915F2AB8FD9200CFE54D;
+			remoteInfo = EssentialFeediOS;
+		};
+		AC24A92C2C62CE2C007C7855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC24A9192C62CE2C007C7855 /* EssentialFeed.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ACC291682AB8FD9200CFE54D;
+			remoteInfo = EssentialFeediOSTests;
+		};
+		AC24A93E2C62CE76007C7855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC24A92F2C62CE76007C7855 /* EssentialFeed.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AC8A425A2A295E4200D1CC84;
+			remoteInfo = EssentialFeed;
+		};
+		AC24A9402C62CE76007C7855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC24A92F2C62CE76007C7855 /* EssentialFeed.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AC8A42642A295E4200D1CC84;
+			remoteInfo = EssentialFeedTests;
+		};
+		AC24A9422C62CE76007C7855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC24A92F2C62CE76007C7855 /* EssentialFeed.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AC53272D2A3B859300C127BB;
+			remoteInfo = EssentialFeedAPIEndToEndTests;
+		};
+		AC24A9442C62CE76007C7855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC24A92F2C62CE76007C7855 /* EssentialFeed.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AC255CF42A98119C007D38F0;
+			remoteInfo = EssentialFeedCacheIntegrationTests;
+		};
+		AC24A9462C62CE76007C7855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC24A92F2C62CE76007C7855 /* EssentialFeed.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ACC2915F2AB8FD9200CFE54D;
+			remoteInfo = EssentialFeediOS;
+		};
+		AC24A9482C62CE76007C7855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC24A92F2C62CE76007C7855 /* EssentialFeed.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ACC291682AB8FD9200CFE54D;
+			remoteInfo = EssentialFeediOSTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AC24A94F2C62CE93007C7855 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AC24A94C2C62CE93007C7855 /* EssentialFeed.framework in Embed Frameworks */,
+				AC24A94E2C62CE93007C7855 /* EssentialFeediOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AC24A8E62C62C98E007C7855 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +152,8 @@
 		AC24A9062C62C98F007C7855 /* EssentialAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC24A90A2C62C98F007C7855 /* EssentialAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUITests.swift; sourceTree = "<group>"; };
 		AC24A90C2C62C98F007C7855 /* EssentialAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AC24A9192C62CE2C007C7855 /* EssentialFeed.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EssentialFeed.xcodeproj; path = ../../../EssentialFeed/EssentialFeed.xcodeproj; sourceTree = "<group>"; };
+		AC24A92F2C62CE76007C7855 /* EssentialFeed.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EssentialFeed.xcodeproj; path = ../../EssentialFeed/EssentialFeed.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +161,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC24A94B2C62CE93007C7855 /* EssentialFeed.framework in Frameworks */,
+				AC24A94D2C62CE93007C7855 /* EssentialFeediOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +189,9 @@
 				AC24A8E82C62C98E007C7855 /* EssentialApp */,
 				AC24A8FF2C62C98F007C7855 /* EssentialAppTests */,
 				AC24A9092C62C98F007C7855 /* EssentialAppUITests */,
+				AC24A92F2C62CE76007C7855 /* EssentialFeed.xcodeproj */,
 				AC24A8E72C62C98E007C7855 /* Products */,
+				AC24A94A2C62CE93007C7855 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,8 +232,42 @@
 			children = (
 				AC24A90A2C62C98F007C7855 /* EssentialAppUITests.swift */,
 				AC24A90C2C62C98F007C7855 /* EssentialAppUITestsLaunchTests.swift */,
+				AC24A9192C62CE2C007C7855 /* EssentialFeed.xcodeproj */,
 			);
 			path = EssentialAppUITests;
+			sourceTree = "<group>";
+		};
+		AC24A91A2C62CE2C007C7855 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC24A9232C62CE2C007C7855 /* EssentialFeed.framework */,
+				AC24A9252C62CE2C007C7855 /* EssentialFeedTests.xctest */,
+				AC24A9272C62CE2C007C7855 /* EssentialFeedAPIEndToEndTests.xctest */,
+				AC24A9292C62CE2C007C7855 /* EssentialFeedCacheIntegrationTests.xctest */,
+				AC24A92B2C62CE2C007C7855 /* EssentialFeediOS.framework */,
+				AC24A92D2C62CE2C007C7855 /* EssentialFeediOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC24A9302C62CE76007C7855 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC24A93F2C62CE76007C7855 /* EssentialFeed.framework */,
+				AC24A9412C62CE76007C7855 /* EssentialFeedTests.xctest */,
+				AC24A9432C62CE76007C7855 /* EssentialFeedAPIEndToEndTests.xctest */,
+				AC24A9452C62CE76007C7855 /* EssentialFeedCacheIntegrationTests.xctest */,
+				AC24A9472C62CE76007C7855 /* EssentialFeediOS.framework */,
+				AC24A9492C62CE76007C7855 /* EssentialFeediOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC24A94A2C62CE93007C7855 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +280,7 @@
 				AC24A8E22C62C98E007C7855 /* Sources */,
 				AC24A8E32C62C98E007C7855 /* Frameworks */,
 				AC24A8E42C62C98E007C7855 /* Resources */,
+				AC24A94F2C62CE93007C7855 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +361,16 @@
 			mainGroup = AC24A8DD2C62C98E007C7855;
 			productRefGroup = AC24A8E72C62C98E007C7855 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AC24A91A2C62CE2C007C7855 /* Products */;
+					ProjectRef = AC24A9192C62CE2C007C7855 /* EssentialFeed.xcodeproj */;
+				},
+				{
+					ProductGroup = AC24A9302C62CE76007C7855 /* Products */;
+					ProjectRef = AC24A92F2C62CE76007C7855 /* EssentialFeed.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AC24A8E52C62C98E007C7855 /* EssentialApp */,
@@ -225,6 +379,93 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AC24A9232C62CE2C007C7855 /* EssentialFeed.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EssentialFeed.framework;
+			remoteRef = AC24A9222C62CE2C007C7855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC24A9252C62CE2C007C7855 /* EssentialFeedTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EssentialFeedTests.xctest;
+			remoteRef = AC24A9242C62CE2C007C7855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC24A9272C62CE2C007C7855 /* EssentialFeedAPIEndToEndTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EssentialFeedAPIEndToEndTests.xctest;
+			remoteRef = AC24A9262C62CE2C007C7855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC24A9292C62CE2C007C7855 /* EssentialFeedCacheIntegrationTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EssentialFeedCacheIntegrationTests.xctest;
+			remoteRef = AC24A9282C62CE2C007C7855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC24A92B2C62CE2C007C7855 /* EssentialFeediOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EssentialFeediOS.framework;
+			remoteRef = AC24A92A2C62CE2C007C7855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC24A92D2C62CE2C007C7855 /* EssentialFeediOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EssentialFeediOSTests.xctest;
+			remoteRef = AC24A92C2C62CE2C007C7855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC24A93F2C62CE76007C7855 /* EssentialFeed.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EssentialFeed.framework;
+			remoteRef = AC24A93E2C62CE76007C7855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC24A9412C62CE76007C7855 /* EssentialFeedTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EssentialFeedTests.xctest;
+			remoteRef = AC24A9402C62CE76007C7855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC24A9432C62CE76007C7855 /* EssentialFeedAPIEndToEndTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EssentialFeedAPIEndToEndTests.xctest;
+			remoteRef = AC24A9422C62CE76007C7855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC24A9452C62CE76007C7855 /* EssentialFeedCacheIntegrationTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EssentialFeedCacheIntegrationTests.xctest;
+			remoteRef = AC24A9442C62CE76007C7855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC24A9472C62CE76007C7855 /* EssentialFeediOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EssentialFeediOS.framework;
+			remoteRef = AC24A9462C62CE76007C7855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC24A9492C62CE76007C7855 /* EssentialFeediOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EssentialFeediOSTests.xctest;
+			remoteRef = AC24A9482C62CE76007C7855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AC24A8E42C62C98E007C7855 /* Resources */ = {
