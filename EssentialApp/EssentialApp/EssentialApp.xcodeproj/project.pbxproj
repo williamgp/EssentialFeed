@@ -15,6 +15,7 @@
 		AC24A95F2C654294007C7855 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24A95E2C654294007C7855 /* FeedLoaderWithFallbackCompositeTests.swift */; };
 		ACF3CD8D2C6569C40022EAB4 /* FeedLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3CD8C2C6569C40022EAB4 /* FeedLoaderWithFallbackComposite.swift */; };
 		ACF3CD8F2C656B640022EAB4 /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3CD8E2C656B640022EAB4 /* FeedImageDataLoaderWithFallbackCompositeTests.swift */; };
+		ACF3CD912C65801B0022EAB4 /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3CD902C65801B0022EAB4 /* FeedImageDataLoaderWithFallbackComposite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		AC24A95E2C654294007C7855 /* FeedLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
 		ACF3CD8C2C6569C40022EAB4 /* FeedLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		ACF3CD8E2C656B640022EAB4 /* FeedImageDataLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
+		ACF3CD902C65801B0022EAB4 /* FeedImageDataLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				AC24A8E92C62C98E007C7855 /* AppDelegate.swift */,
 				AC24A8EB2C62C98E007C7855 /* SceneDelegate.swift */,
 				ACF3CD8C2C6569C40022EAB4 /* FeedLoaderWithFallbackComposite.swift */,
+				ACF3CD902C65801B0022EAB4 /* FeedImageDataLoaderWithFallbackComposite.swift */,
 				AC24A8EF2C62C98E007C7855 /* Main.storyboard */,
 				AC24A8F22C62C98F007C7855 /* Assets.xcassets */,
 				AC24A8F42C62C98F007C7855 /* LaunchScreen.storyboard */,
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF3CD912C65801B0022EAB4 /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 				AC24A8EA2C62C98E007C7855 /* AppDelegate.swift in Sources */,
 				ACF3CD8D2C6569C40022EAB4 /* FeedLoaderWithFallbackComposite.swift in Sources */,
 				AC24A8EC2C62C98E007C7855 /* SceneDelegate.swift in Sources */,
