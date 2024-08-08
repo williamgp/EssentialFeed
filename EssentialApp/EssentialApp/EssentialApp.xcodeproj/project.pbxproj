@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		AC24A8EA2C62C98E007C7855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24A8E92C62C98E007C7855 /* AppDelegate.swift */; };
 		AC24A8EC2C62C98E007C7855 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24A8EB2C62C98E007C7855 /* SceneDelegate.swift */; };
-		AC24A8EE2C62C98E007C7855 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24A8ED2C62C98E007C7855 /* ViewController.swift */; };
 		AC24A8F12C62C98E007C7855 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC24A8EF2C62C98E007C7855 /* Main.storyboard */; };
 		AC24A8F32C62C98F007C7855 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC24A8F22C62C98F007C7855 /* Assets.xcassets */; };
 		AC24A8F62C62C98F007C7855 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC24A8F42C62C98F007C7855 /* LaunchScreen.storyboard */; };
 		AC24A95F2C654294007C7855 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24A95E2C654294007C7855 /* FeedLoaderWithFallbackCompositeTests.swift */; };
+		ACF3CD8D2C6569C40022EAB4 /* FeedLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3CD8C2C6569C40022EAB4 /* FeedLoaderWithFallbackComposite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,13 +43,13 @@
 		AC24A8E62C62C98E007C7855 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC24A8E92C62C98E007C7855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC24A8EB2C62C98E007C7855 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AC24A8ED2C62C98E007C7855 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC24A8F02C62C98E007C7855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC24A8F22C62C98F007C7855 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC24A8F52C62C98F007C7855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC24A8F72C62C98F007C7855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC24A8FC2C62C98F007C7855 /* EssentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC24A95E2C654294007C7855 /* FeedLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
+		ACF3CD8C2C6569C40022EAB4 /* FeedLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,7 @@
 			children = (
 				AC24A8E92C62C98E007C7855 /* AppDelegate.swift */,
 				AC24A8EB2C62C98E007C7855 /* SceneDelegate.swift */,
-				AC24A8ED2C62C98E007C7855 /* ViewController.swift */,
+				ACF3CD8C2C6569C40022EAB4 /* FeedLoaderWithFallbackComposite.swift */,
 				AC24A8EF2C62C98E007C7855 /* Main.storyboard */,
 				AC24A8F22C62C98F007C7855 /* Assets.xcassets */,
 				AC24A8F42C62C98F007C7855 /* LaunchScreen.storyboard */,
@@ -220,8 +220,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC24A8EE2C62C98E007C7855 /* ViewController.swift in Sources */,
 				AC24A8EA2C62C98E007C7855 /* AppDelegate.swift in Sources */,
+				ACF3CD8D2C6569C40022EAB4 /* FeedLoaderWithFallbackComposite.swift in Sources */,
 				AC24A8EC2C62C98E007C7855 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
