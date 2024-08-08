@@ -43,6 +43,14 @@
         "identifier" : "ACC291672AB8FD9200CFE54D",
         "name" : "EssentialFeediOSTests"
       }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:EssentialApp.xcodeproj",
+        "identifier" : "AC24A8FB2C62C98F007C7855",
+        "name" : "EssentialAppTests"
+      }
     }
   ],
   "version" : 1
