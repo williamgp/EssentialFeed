@@ -1,6 +1,7 @@
 //  Created by William Peregoy on 8/6/24
 
 import UIKit
+import CoreData
 import EssentialFeed
 import EssentialFeediOS
 
@@ -13,13 +14,60 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let remoteURL = URL(string: "https://ile-api.essentialdeveloper.com/essential-feed/v1/feed")!
         
-        let remoteClient = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
+        let remoteClient = makeRemoteClient()
         let remoteFeedLoader = RemoteFeedLoader(url: remoteURL, client: remoteClient)
         let remoteImageLoader = RemoteFeedImageDataLoader(client: remoteClient)
         
+        let localStoreURL = NSPersistentContainer
+            .defaultDirectoryURL()
+            .appending(path: "feed-store.sqlite")
+        
+        let localStore = try! CoreDataFeedStore(storeURL: localStoreURL)
+        let localFeedLoader = LocalFeedLoader(store: localStore, currentDate: Date.init)
+        let localImageLoader = LocalFeedImageDataLoader(store: localStore)
+        
         window?.rootViewController = FeedUIComposer.feedComposedWith(
-            feedLoader: remoteFeedLoader,
-            imageLoader: remoteImageLoader)
+            feedLoader: FeedLoaderWithFallbackComposite(
+                primary: FeedLoaderCacheDecorator(
+                    decoratee: remoteFeedLoader,
+                    cache: localFeedLoader),
+                fallback: localFeedLoader),
+            imageLoader: FeedImageDataLoaderWithFallbackComposite(
+                primary: FeedImageDataLoaderCacheDecorator(
+                    decoratee: remoteImageLoader,
+                    cache: localImageLoader),
+                fallback: localImageLoader))
     }
     
+    private func makeRemoteClient() -> HTTPClient {
+        switch connectivityFlag() {
+        case "offline":
+            return AlwaysFailingHTTPClient()
+            
+        default:
+            return URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
+        }
+    }
+    
+    private func connectivityFlag() -> String? {
+        if let value = UserDefaults.standard.string(forKey: "connectivity") {
+            return value
+        }
+        let args = ProcessInfo.processInfo.arguments
+        if let idx = args.firstIndex(of: "-connectivity"), idx + 1 < args.count {
+            return args[idx + 1]
+        }
+        return nil
+    }
+}
+
+private class AlwaysFailingHTTPClient: HTTPClient {
+    private class Task: HTTPClientTask {
+        func cancel() {}
+    }
+    
+    func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
+        completion(.failure(NSError(domain: "offline", code: 0)))
+        return Task()
+    }
 }
