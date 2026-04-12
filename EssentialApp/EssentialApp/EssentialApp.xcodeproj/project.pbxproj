@@ -45,6 +45,13 @@
 			remoteGlobalIDString = AC24A8E52C62C98E007C7855;
 			remoteInfo = EssentialApp;
 		};
+		ACF30EDE2C620000007EED01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACF30EDD2C620000007EED00 /* EssentialFeed.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = ACC2915E2AB8FD9200CFE54D;
+			remoteInfo = EssentialFeediOS;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -87,6 +94,7 @@
 		08B52E7B237AF87F0092D15B /* EssentialAppUIAcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppUIAcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B52E7D237AF87F0092D15B /* EssentialAppUIAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUIAcceptanceTests.swift; sourceTree = "<group>"; };
 		08B52E7F237AF87F0092D15B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACF30EDD2C620000007EED00 /* EssentialFeed.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EssentialFeed.xcodeproj; path = ../../EssentialFeed/EssentialFeed.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,7 @@
 		AC24A8DD2C62C98E007C7855 = {
 			isa = PBXGroup;
 			children = (
+				ACF30EDD2C620000007EED00 /* EssentialFeed.xcodeproj */,
 				AC24A8E82C62C98E007C7855 /* EssentialApp */,
 				AC24A8FF2C62C98F007C7855 /* EssentialAppTests */,
 				08B52E7C237AF87F0092D15B /* EssentialAppUIAcceptanceTests */,
@@ -209,6 +218,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				ACF30EDF2C620000007EED02 /* PBXTargetDependency */,
 			);
 			name = EssentialApp;
 			productName = EssentialApp;
@@ -373,6 +383,10 @@
 			isa = PBXTargetDependency;
 			target = AC24A8E52C62C98E007C7855 /* EssentialApp */;
 			targetProxy = 08B52E80237AF87F0092D15B /* PBXContainerItemProxy */;
+		};
+		ACF30EDF2C620000007EED02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			targetProxy = ACF30EDE2C620000007EED01 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
