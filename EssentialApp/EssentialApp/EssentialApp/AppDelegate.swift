@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         #if DEBUG
         configuration.delegateClass = DebuggingSceneDelegate.self
+        #else
+        configuration.delegateClass = SceneDelegate.self
         #endif
         
         return configuration
