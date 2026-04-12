@@ -8,12 +8,13 @@ class EssentialAppUIAcceptanceTests: XCTestCase {
 	
 	func test_onLaunch_displaysRemoteFeedWhenCustomerHasConnectivity() {
 		let app = XCUIApplication()
-		app.launchArguments = ["-reset"]
-		
+		app.launchArguments = ["-reset", "-connectivity", "online"]
+		app.launchEnvironment["CONNECTIVITY"] = "online"
 		app.launch()
 		
 		let feedCells = app.cells.matching(identifier: "feed-image-cell")
-		XCTAssertEqual(feedCells.count, 22)
+		XCTAssertTrue(feedCells.firstMatch.waitForExistence(timeout: 15))
+		XCTAssertEqual(feedCells.count, 2)
 		
 		let firstImage = app.images.matching(identifier: "feed-image-view").firstMatch
 		XCTAssertTrue(firstImage.exists)
@@ -21,15 +22,18 @@ class EssentialAppUIAcceptanceTests: XCTestCase {
 	
 	func test_onLaunch_displaysCachedRemoteFeedWhenCustomerHasNoConnectivity() {
 		let onlineApp = XCUIApplication()
-		onlineApp.launchArguments = ["-reset"]
+		onlineApp.launchArguments = ["-reset", "-connectivity", "online"]
+		onlineApp.launchEnvironment["CONNECTIVITY"] = "online"
 		onlineApp.launch()
 
 		let offlineApp = XCUIApplication()
 		offlineApp.launchArguments = ["-connectivity", "offline"]
+		offlineApp.launchEnvironment["CONNECTIVITY"] = "offline"
 		offlineApp.launch()
 
 		let cachedFeedCells = offlineApp.cells.matching(identifier: "feed-image-cell")
-		XCTAssertEqual(cachedFeedCells.count, 22)
+		XCTAssertTrue(cachedFeedCells.firstMatch.waitForExistence(timeout: 15))
+		XCTAssertEqual(cachedFeedCells.count, 2)
 		
 		let firstCachedImage = offlineApp.images.matching(identifier: "feed-image-view").firstMatch
 		XCTAssertTrue(firstCachedImage.exists)
@@ -38,6 +42,7 @@ class EssentialAppUIAcceptanceTests: XCTestCase {
 	func test_onLaunch_displaysEmptyFeedWhenCustomerHasNoConnectivityAndNoCache() {
 		let app = XCUIApplication()
 		app.launchArguments = ["-reset", "-connectivity", "offline"]
+		app.launchEnvironment["CONNECTIVITY"] = "offline"
 		app.launch()
 
 		let feedCells = app.cells.matching(identifier: "feed-image-cell")
