@@ -42,11 +42,18 @@ extension FeedViewController {
         refreshControl?.isRefreshing == true
     }
     
+    func renderedFeedImageData(at index: Int) -> Data? {
+        simulateFeedImageViewVisible(at: index)?.renderedImage
+    }
+    
     func numberOfRenderedFeedImageViews() -> Int {
         return tableView.numberOfRows(inSection: feedImageSection)
     }
     
     func feedImageView(at row: Int) -> UITableViewCell? {
+        guard numberOfRenderedFeedImageViews() > row else {
+            return nil
+        }
         let ds = tableView.dataSource
         let index = IndexPath(row: row, section: feedImageSection)
         return ds?.tableView(tableView, cellForRowAt: index)
@@ -59,11 +66,20 @@ extension FeedViewController {
     func simulateAppearance() {
         if !isViewLoaded {
             loadViewIfNeeded()
-            replaceRefreshControlWithFakeForiOS17Support()
+            prepareForFirstAppearance()
         }
         
         beginAppearanceTransition(true, animated: false)
         endAppearanceTransition()
+    }
+    
+    private func prepareForFirstAppearance() {
+        setSmallFrameToPreventRenderingCells()
+        replaceRefreshControlWithFakeForiOS17Support()
+    }
+    
+    private func setSmallFrameToPreventRenderingCells() {
+        tableView.frame = CGRect(x: 0, y: 0, width: 390, height: 1)
     }
     
     func replaceRefreshControlWithFakeForiOS17Support() {
