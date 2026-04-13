@@ -2,8 +2,9 @@
 
 import UIKit
 import EssentialFeed
+import EssentialFeediOS
 
-internal final class FeedViewAdapter: FeedView {
+final class FeedViewAdapter: FeedView {
     private weak var controller: FeedViewController?
     private let imageLoader: FeedImageDataLoader
     
