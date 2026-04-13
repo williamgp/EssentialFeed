@@ -21,18 +21,9 @@ public final class FeedViewController: UITableViewController,
         }
     }
     
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if #unavailable(iOS 18) {
-            triggerInitialLoadIfNeeded()
-        }
-    }
-    
     public override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
-        if #available(iOS 18, *) {
-            triggerInitialLoadIfNeeded()
-        }
+        triggerInitialLoadIfNeeded()
     }
     
     private func triggerInitialLoadIfNeeded() {
