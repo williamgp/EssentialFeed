@@ -1,9 +1,9 @@
 //  Created by William Peregoy on 4/2/24
 
-import Foundation
 import EssentialFeed
+import EssentialFeediOS
 
-internal final class FeedLoaderPresentationAdapter: FeedViewControllerDelegate {
+final class FeedLoaderPresentationAdapter: FeedViewControllerDelegate {
     private let feedLoader: FeedLoader
     var presenter: FeedPresenter?
     

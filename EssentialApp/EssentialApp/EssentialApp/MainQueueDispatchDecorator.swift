@@ -3,7 +3,7 @@
 import Foundation
 import EssentialFeed
 
-internal final class MainQueueDispatchDecorator<T> {
+final class MainQueueDispatchDecorator<T> {
     private let decoratee: T
     
     init(decoratee: T) {
